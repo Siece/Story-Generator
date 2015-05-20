@@ -1,0 +1,18 @@
+Alien
+Astrogator
+BEM
+Clone
+Colonist
+Galactic Ruler
+Genetic Engineer
+Gunner
+Space marine
+Starship crew
+Starship engineer
+Starship navigator
+Starship pilot
+Superhuman
+Telepath
+Xenoarchaeologist
+Xenobiologist
+Xenobotanist

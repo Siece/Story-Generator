@@ -1,0 +1,77 @@
+Dark Blue
+Light Blue
+Dark Brown
+Light Brown
+Amber
+Grey
+Dark Green
+Light Green
+Hazel
+Heterochromia
+Amber
+Golden
+Black
+Black - coal black
+Black – ebony
+Black – jet
+Black – (mid) night 
+Black – obsidian
+Black – pitch black
+Black - sloe-eyed
+Black – smoky
+Black – soot
+Black – velvety
+Blue – aquamarine 
+Arctic blue
+Blue – baby blue
+Blue – china blue
+Blue – cornflower blue
+Blue – crystal blue
+Blue - denim blue
+Blue – electric blue
+Blue – forget-me-not blue
+Blue – gunmetal blue
+Blue – ice blue
+Blue – indigo
+Blue - laser-beam blue
+Blue – sapphire
+Blue – sky blue
+Blue –  steel blue
+Brown – amber
+Brown - brandy
+Brown – champagne
+Brown – chestnut
+Brown – chocolate
+Brown – cognac
+Brown – doe-eyed 
+Brown – golden
+Brown – honey 
+Brown – nut brown 
+Brown – russet
+Brown – soft 
+Brown –  tawny 
+Brown –  topaz
+Brown – velvety 
+Brown – whiskey
+Gray
+Gray – charcoal gray
+Gray – cloud gray
+Gray – graphite
+Gray – gunmetal
+Gray – silver
+Gray – slate
+Gray – smoky
+Gray – steel
+Gray – storm 
+Green – bottle green
+Green – cat's eye green
+Green – chartreuse
+Green – emerald
+Green – forest green
+Green – grass green
+Green – jade green 
+Green – leaf green
+Green – sea green
+Violet – amethyst
+Violet – hyacinth
+Violet – ultramarine 
