@@ -22,7 +22,6 @@ public class StoryClient {
       boolean more = true;
       while(more){
          userInput(console, storyInfo, genre);
-         //System.out.println();
          System.out.println("Do you want more information?");
          String answer = console.next();
          if(answer.charAt(0) != 'y') {

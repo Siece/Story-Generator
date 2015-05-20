@@ -93,14 +93,12 @@ Molecular Combustion
 Molecular Dissipation
 Molecular Immobilization
 Molecular Manipulation
-Natural ArmorNatural WeaponsNova Force
-O
-
+Natural Armor
+Natural Weapons
+Nova Force
 Omnilingualism
 Omnipotence
 OmnitrixOrbing
-P
-
 Phasing
 Photographic Reflexes
 Photokinesis
@@ -120,13 +118,56 @@ Psionic Powers
 Psychokinesis
 Pyrokinesis
 Qwardian Power Ring
-R
-
-Radar SenseRadiation AbsorptionRadiation ControlRadiation ImmunityReality WarpingReflexesRegenerationResurrection
-S
-
-Seismic PowerSelf-SustenanceSeparationShapeshiftingSize ChangingSonarSonic ScreamSpatial AwarenessStaminaStealthSub-MarinerSubstance SecretionSummoningSuper BreathSuper SpeedSuper StrengthSymbiote Costume
-Technopath/CyberpathTelekinesisTelepathyTelepathy ResistanceTeleportationTerrakinesisThermokinesisThirstokinesisTime TravelTimeframe ControlToxikinesisToxin and Disease Resistance
-UmbrakinesisUnderwater breathing
-Vaporising BeamsVision - CryoVision - HeatVision - InfraredVision - MicroscopicVision - NightVision - TelescopicVision - ThermalVision - X-RayVitakinesis
-WallcrawlingWeapon-based PowersWeapons MasterWeb CreationWishing
+Radar Sense
+Radiation Absorption
+Radiation Control
+Radiation Immunity
+Reality Warping
+Reflexes
+Regeneration
+Resurrection
+Seismic Power
+Self-Sustenance
+Separation
+Shapeshifting
+Size Changing
+SonarSonic Scream
+Spatial Awareness
+Stamina
+Stealth
+Sub-Mariner
+Substance Secretion
+Summoning
+Super Breath
+Super Speed
+Super Strength
+Symbiote Costume
+Technopath/Cyberpath
+Telekinesis
+Telepathy
+Telepathy Resistance
+Teleportation
+Terrakinesis
+Thermokinesis
+Thirstokinesis
+Time Travel
+Timeframe Control
+Toxikinesis
+Toxin and Disease Resistance
+Umbrakinesis
+Underwater breathing
+Vaporising Beams
+Vision - Cryo
+Vision - Heat
+Vision - Infrared
+Vision - Microscopic
+Vision - Night
+Vision - Telescopic
+Vision - Thermal
+Vision - X-Ray
+Vitakinesis
+Wallcrawling
+Weapon-based Powers
+Weapons Master
+Web Creation
+Wishing
