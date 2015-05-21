@@ -41,21 +41,19 @@ public class Character extends Story {
       hair();
       height();
       skinTone();
-      personality = super.personality();
+      personality();
       occupation(genre);
-      species(genre, type);
       if (genre.equals("superhero")) {
          superpowers();
       }
    }
    
-   public String superpowers() throws FileNotFoundException{
+   public String superpowers() {
       Scanner superInfo = new Scanner(new File("superpowers.txt" ));
       ArrayList<String> powers = textToArray(superInfo);  
       this.superpower = randomize(powers);
       return this.superpower;
    }
-   
    /* @param nothing
    * @return a String with a randomly selected skin tone from the text file
    * uses the textToArray and randomize methods to pick a random skin tone from the file
@@ -73,13 +71,13 @@ public class Character extends Story {
    */
    public int age(String genre) {
       if(genre.equals("sci-fi")) {
-         this.age = (int)(Math.random() * 200 + 5);
+         this.age = (int)(Math.random() * 200);
       } 
       else if (genre.equals("historical")){
-         this.age = (int) (Math.random() * 31 + 5);
+         this.age = (int) (Math.random() * 40);
       }
       else { 
-         this.age = (int)(Math.random() * 90 + 5);
+         this.age = (int)(Math.random() * 90);
       }
       return age;
    }
@@ -133,13 +131,12 @@ public class Character extends Story {
    * @return a String with two randomly selected personality traits
    * uses textToArray and randomize methods to pick two random personality traits from the file
    */
-   
-   //public String personality() throws FileNotFoundException{
-     // Scanner personality = new Scanner(new File("PersonalityTraits.txt" ));
-     // ArrayList<String> traits = textToArray(personality); 
-     // this.personality =  randomize(traits) + ", " + randomize(traits);
-     // return this.personality;
-   //}
+   public String personality() throws FileNotFoundException{
+      Scanner personality = new Scanner(new File("PersonalityTraits.txt" ));
+      ArrayList<String> traits = textToArray(personality); 
+      this.personality =  randomize(traits) + ", " + randomize(traits);
+      return this.personality;
+   }
    
    /* @param a String containing the genre
    * @return a String with a randomly selected occupation based off genre
@@ -180,6 +177,7 @@ public class Character extends Story {
       else {
          feet += 2;
       }
+      //if (feet =!) {    //whatever is going on here is pissing off the compiler!
       int inch = (int)(Math.random() * 11);
       this.height =  feet + "'" + inch + "\"";
       return this.height;
@@ -191,25 +189,13 @@ public class Character extends Story {
    * otherwise returns a basic species based on type and genre
    */
    public String species(String genre, String type) throws FileNotFoundException{
-      if(!type.equals("human")){
-         if (genre.equals("sci-fi")){
-            Scanner aliens = new Scanner(new File("scifiSpecies.txt" ));
-            ArrayList<String> ufo = textToArray(aliens);
-            this.species = randomize(ufo);
-         }
-         else
-            if(genre.equals("fantasy")){
-               Scanner mythology = new Scanner(new File("creatures.txt" ));
-               ArrayList<String> mythos = textToArray(mythology); 
-               this.species = randomize(mythos);
-            } 
-            else {
-               Scanner all = new Scanner(new File("scifiSpecies.txt" ));
-               ArrayList<String> allCreature = textToArray(all);
-               addToArray(new Scanner(new File("creatures.txt" )), allCreature);
-               this.species = randomize(allCreature);
-            }
-      
+      if(genre.equals("fantasy") && type.equals("creature")){
+         Scanner mythology = new Scanner(new File("creatures.txt" ));
+         ArrayList<String> mythos = textToArray(mythology); 
+         this.species = randomize(mythos);
+      } 
+      else if (genre.equals("sci-fi") && type.equals("creature")){
+         this.species = "alien";   //how specific
       }
       else { 
          this.species = "human";
@@ -218,12 +204,22 @@ public class Character extends Story {
    }
    
    /* @param nothing
+   * @return a String with a random mythological creature as the species
+   * uses the textToArray and randomize methods to pick a random species, not based on anything
+   */
+   public String species() throws FileNotFoundException {
+      Scanner mythology = new Scanner(new File("creatures.txt" ));
+      ArrayList<String> mythos = textToArray(mythology); 
+      return randomize(mythos);
+   }
+   
+   /* @param nothing
    * @return a String with all the fields in it
    * turns all the fields and their names into a long String, which it returns
    */
    public String toString() {   
       String text =  "Name: " + this.name + "\n Age: " + this.age + "\n Appearance: " +
-         "\n   Eye Color: " + this.eyes + "\n   Hair Color: " + this.hair + "\n   Height: " 
+         "\n\t Eye Color: " + this.eyes + "\n\t Hair Color: " + this.hair + "\n\t Height: " 
          + this.height + "\n Personality: " + this.personality + "\n Occupation: " + 
          this.job + "\n Species: " + this.species;
       if(genre.equals("superhero")) {

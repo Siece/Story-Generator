@@ -34,6 +34,20 @@ public abstract class Story {
       return data.get(numb);
    }
    
+   public ArrayList<String> addToArray(Scanner text, ArrayList<String> data){
+      while(text.hasNext()){
+         data.add(text.nextLine());
+      }
+      return data; 
+   }
+   public String personality() throws FileNotFoundException{
+      String persons;
+      Scanner personality = new Scanner(new File("PersonalityTraits.txt" ));
+      ArrayList<String> traits = textToArray(personality); 
+      persons =  randomize(traits) + ", " + randomize(traits);
+      return persons;
+   }
+   
    /* @param nothing
    * @return a String representation of the information of the class
    * takes the information stored in or passed to the class, turns it into a String version,

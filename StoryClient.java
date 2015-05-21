@@ -22,30 +22,37 @@ public class StoryClient {
       boolean more = true;
       while(more){
          userInput(console, storyInfo, genre);
-         System.out.println("Do you want more information?");
+         System.out.println("Do you want more information? (yes/no)");
          String answer = console.next();
          if(answer.charAt(0) != 'y') {
             more = false;
          }
       }
-      output2(storyInfo, genre);  
+      output(storyInfo, genre);  
    } 
    
    /* @param nothing
    * @return an ArrayList with data given by user in order [genre, inforamtion requseted, character type, gender]
    * takes basic information about what information the user wants and stores it in an ArrayList
+   Internal ArrayList infomation:
+   0: inforamtion requseted
+   1: type of character/ item
+   2: gender/ sentiance
    */
-     
    public static void userInput(Scanner console, ArrayList<Story> storyInfo, String genre)throws FileNotFoundException{
       ArrayList<String> userData = new ArrayList<String>(4);
-      System.out.println("What infomation do you want? (character/setting/companion/plot)");
+      System.out.println("What infomation do you want? (character/setting/plot/item)");
       userData.add(console.next());
-      if(userData.get(0).equals("character") || userData.get(0).equals("companion")){
+      if(userData.get(0).equals("character")){
          System.out.println("Type? (human/creature)");
          userData.add(console.next());
-      }
-      if(userData.get(0).equals("character")){  //don't we need gender for companions too?
          System.out.println("Gender? (male/female/either)");
+         userData.add(console.next());
+      }
+      if(userData.get(0).equals("item")){
+         System.out.println("What type? (weapon/accessory/pet/random)");
+         userData.add(console.next());
+         System.out.println("Sentiance? (yes/no)");
          userData.add(console.next());
       }
       System.out.println();
@@ -60,20 +67,13 @@ public class StoryClient {
       else if (userData.get(0).equals("plot")){
          Plot tale = new Plot ();    
          storyInfo.add(tale);                
+      } else if (userData.get(0).equals("item")) {
+         Props thing = new Props(genre, userData.get(1), userData.get(2));
+         storyInfo.add(thing);
       }
-      else if (userData.get(0).equals("companion")) {
-         Character b = new Character("either", genre, userData.get(1));    //they don't get to pick gender of companion?
-         storyInfo.add(b);
-      }
-      
    }
    
-   /*
-   ArrayList infomation:
-   0: inforamtion requseted
-   1: type of character
-   2: gender
-   */
+   
    
    /* @param the ArrayList of userData containing [genre, info type, type, gender]
    * @return nothing
@@ -82,8 +82,9 @@ public class StoryClient {
    * depending on the category of the information sought
    */
    
-   public static void output2 (ArrayList<Story> info, String genre) {
+   public static void output (ArrayList<Story> info, String genre) {
       System.out.println("Genre: " + genre);
+      System.out.println();
       for(int i = 0; i < info.size(); i++) {
          System.out.println(info.get(i));
          System.out.println();
